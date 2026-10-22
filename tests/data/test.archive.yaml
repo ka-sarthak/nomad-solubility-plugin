@@ -1,3 +1,54 @@
 data:
-  m_def: nomad_solubility_plugin.schema_packages.schema_package.NewSchemaPackage
-  name: Markus
+  m_def: nomad_solubility_plugin.schema_packages.schema_package.EquilibriumSolution
+  name: Synthetic equilibrium solution
+  temperature: 298.15
+  temperature_initial: 293.15
+  temperature_final: 303.15
+  estimated_error_temperature: |
+    ±0.05 K
+    Reported thermometer uncertainty.
+  pressure: 101325.0
+  measurement_methods:
+    - static equilibrium
+    - gravimetry
+  mixing_methods:
+    - stirring
+  phases:
+    - name: aqueous solution
+      state_of_matter: liquid
+      density: 997.0
+      salinity: 0.035
+      ph: 7.0
+      substance:
+        name: water
+        pub_chem_cid: 962
+      components:
+        - name: carbon dioxide
+          substance:
+            name: carbon dioxide
+            pub_chem_cid: 280
+          source_purity: |
+            Synthetic source, purity ≥99.9 %.
+            Dried before use.
+          amount:
+            mole_fraction: 0.0006
+            molality: 0.034
+            molar_concentration: 34.0
+            mass_concentration: 1.5
+            estimated_error_solubility: |
+              ±2 %
+              Reported relative uncertainty.
+        - name: water
+          amount:
+            mass_fraction: 0.9985
+    - name: gas
+      state_of_matter: gas
+      components:
+        - name: carbon dioxide
+          amount:
+            mole_fraction: 1.0
+            partial_pressure: 100000.0
+  publication_references:
+    - publication_title: Synthetic solubility study
+      journal: Example journal
+    - publication_title: Synthetic measurement methods

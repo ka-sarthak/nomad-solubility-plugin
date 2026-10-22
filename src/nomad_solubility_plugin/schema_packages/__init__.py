@@ -1,17 +1,14 @@
 from nomad.config.models.plugins import SchemaPackageEntryPoint
-from pydantic import Field
 
 
-class NewSchemaPackageEntryPoint(SchemaPackageEntryPoint):
-    parameter: int = Field(0, description='Custom configuration parameter')
-
+class SolubilitySchemaPackageEntryPoint(SchemaPackageEntryPoint):
     def load(self):
         from nomad_solubility_plugin.schema_packages.schema_package import m_package
 
         return m_package
 
 
-schema_package_entry_point = NewSchemaPackageEntryPoint(
-    name='NewSchemaPackage',
-    description='New schema package entry point configuration.',
+schema_package_entry_point = SolubilitySchemaPackageEntryPoint(
+    name='OSI Hackathon Schema',
+    description='Schema package for solubility and equilibrium solution data.',
 )
