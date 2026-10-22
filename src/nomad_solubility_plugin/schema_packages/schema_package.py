@@ -253,7 +253,6 @@ class Phase(ArchiveSection):
             'dimensionless. Divide reported g/kg solution by 1000 for storage.'
         ),
         a_eln=ELNAnnotation(component=ELNComponentEnum.NumberEditQuantity),
-        a_display=QuantityDisplayAnnotation(unit='gram / kilogram'),
     )
     ph = Quantity(
         type=np.float64,
