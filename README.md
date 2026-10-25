@@ -1,8 +1,7 @@
 # nomad-solubility-plugin
 
-A plugin for onboarding solubility data from IUPAC.
-
-This `nomad` plugin was generated with `Cookiecutter` along with `@nomad`'s [`cookiecutter-nomad-plugin`](https://github.com/FAIRmat-NFDI/cookiecutter-nomad-plugin) template.
+A NOMAD plugin for hosting LLM-extracted data from IUPAC Solubility data series. 
+The data was extracted by [SolTractor](https://github.com/briling/SolTractor) project built during the OSI Hackathon 2026.
 
 ## Development
 
